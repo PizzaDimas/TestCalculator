@@ -6,7 +6,7 @@ import java.util.Scanner;
  */
 public class Calculator {
     public static void main(String[] args) throws Exception {
-        System.out.println(calc(checkData(enterInput())));
+        System.out.println(calc(checkInput(enterInput())));
     }
     public static String calc(String input){                                                                            // вычисляет значение
         try {
@@ -32,7 +32,7 @@ public class Calculator {
         String input = sc.nextLine();
         return input;
 }
-    private static String checkData(String input) throws Exception{                                                      // проверяет строку на ограничения
+    private static String checkInput(String input) throws Exception{                                                     // проверяет строку на ограничения
         try{
             String[] arraySymbol = input.split(" ");
             if (arraySymbol.length != 3) {
